@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auction</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="item">
+			<h1><%=auction.name%></h1>
+			<img src=<%=auction.image%>>
+			<p class="description"><%=auction.description%></p>
+		</div>
+		<aside class="bid">
+			<h1>Auction</h1>
+			<h1>$ <%=auction.bid[auction.bid.length-1]%></h1>
+			<form action="<%=auction._id%>/bid" method="POST">
+				<div class="form-group">
+					<input type="text" name="bid" autocomplete="off">	
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary">Bid</button>
+				</div>
+			</form>
+		</aside>
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

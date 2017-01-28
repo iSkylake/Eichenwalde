@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auction</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+	<div class="container">
+		<% auctions.forEach(function(auction){ %>
+			<div class="auction-preview">
+				<h3><%=auction.name%></h3>
+				<img src=<%=auction.image%>>
+				<a href="/<%=auction.id%>"><button class="btn btn-primary">Join</button></a>
+			</div>
+		<% }) %>
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
